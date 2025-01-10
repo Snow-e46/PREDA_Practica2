@@ -13,23 +13,35 @@ public class Pila {
 		this.discos = new Stack<>();
 	}
 
-	// Métodos
+	
 	public void apilar(int disco) {
+		
 		if (!discos.isEmpty() && discos.peek() < disco) {
-			throw new IllegalStateException("No se puede colocar un disco más grande sobre uno más pequeño.");
+			
+			throw new IllegalStateException("No se puede colocar un disco mas grande sobre uno mas pequeño");
+			
 		}
+		
 		discos.push(disco);
+		
 	}
 
 	public int desapilar() {
+		
 		if (discos.isEmpty()) {
-			throw new IllegalStateException("No hay discos para desapilar.");
+			
+			throw new IllegalStateException("No hay discos para desapilar");
+			
 		}
+		
 		return discos.pop();
+		
 	}
 
 	public boolean esVacia() {
+		
 		return discos.isEmpty();
+		
 	}
 
 	public String getNombre() {
@@ -40,4 +52,5 @@ public class Pila {
 	public String toString() {
 		return nombre + " " + discos.toString();
 	}
+	
 }
