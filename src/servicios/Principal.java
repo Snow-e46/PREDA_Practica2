@@ -21,7 +21,7 @@ public class Principal {
 
 			// Organizacion segun la cantidad de parametros adjuntos
 
-			// Lógica para 1 parámetro
+			// Logica para 1 parametro
 			if (args.length == 1) {
 
 				// Posibilidads: -t // -h // fichero_entrada
@@ -43,7 +43,7 @@ public class Principal {
 
 				}
 
-				// Lógica para 2 parámetros
+				// Logica para 2 parametros
 			} else if (args.length == 2) {
 
 				// Posibilidades: -t -h // -t fichero_entrada // -h fichero_entrada //
@@ -58,7 +58,7 @@ public class Principal {
 					System.err.println("Argumentos erroneos, puede solicitar ayuda introduciendo \"-h\"");
 
 				} else if (args[0].equalsIgnoreCase("-t")) {
-					// Lógica trazada con fichero_entrada
+					// Logica trazada con fichero_entrada
 					Lector.fichero = new File(args[1]);
 					ejecutarLogica(" ", true);
 
@@ -75,7 +75,7 @@ public class Principal {
 
 				}
 
-				// Lógica para 3 parámetros
+				// Logica para 3 parametros
 			} else if (args.length == 3) {
 
 				// Posibilidades: -t -h fichero_entrada // -t fichero_entrada fichero_salida //
@@ -92,7 +92,7 @@ public class Principal {
 					System.err.println("Argumentos erroneos, puede solicitar ayuda introduciendo \"-h\"");
 
 				} else if (args[0].equalsIgnoreCase("-t")) {
-					// Lógica trazada con fichero_entrada
+					// Logica trazada con fichero_entrada
 					Lector.fichero = new File(args[1]);
 					ejecutarLogica(args[2], true);
 
@@ -104,7 +104,7 @@ public class Principal {
 
 				}
 
-				// Lógica para 4 parámetros
+				// Logica para 4 parametros
 			} else if (args.length == 4) {
 
 				// Implementacion logica para los 4 argumentos
@@ -146,7 +146,7 @@ public class Principal {
 
 		try {
 
-			// Leer parámetros desde el archivo de entrada
+			// Leer parametros desde el archivo de entrada
 			int[] parametros = Lector.leerParametros();
 			int posteOrigen = parametros[0];
 			int posteDestino = parametros[1];
